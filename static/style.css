@@ -1,0 +1,149 @@
+
+body{
+  background-color:#212121;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto,sans-serif;
+
+}
+
+.logoimg{
+  width: 500px;
+}
+/*Tutorial*/
+.tutorial{
+  padding: 20px;
+}
+.texto{
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box {
+  text-align: center;
+  margin: 10px;
+}
+
+ .zoom {
+   transition: transform 0.5s;
+   margin: 0 auto;
+ }
+
+.zoom:hover {
+  transform: scale(1.1);
+}
+/*Tutorial*/
+
+/*Caixa de Texto*/
+
+.inputBox {
+
+  position: relative;
+}
+
+.inputBox input {
+  width: 500px;
+  height: 23px;
+  padding: 15px 20px;
+  outline: none;
+  background: transparent;
+  border-radius: 10px;
+  color: #fff;
+  border: 2px solid #f53400;
+  font-size: 1em;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 15px 20px;
+  pointer-events: none;
+  font-size: 1.2em;
+  transition: 0.4s cubic-bezier(0.05, 0.81, 0, 0.93);
+  color: #ffffff;
+  letter-spacing: 0.1em;
+}
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span {
+  font-size: 1em;
+  transform: translateX(14px) translateY(-7.5px);
+  padding: 0 5px;
+  border-radius: 2px;
+  background: #212121;
+  letter-spacing: 0em;
+  border: 1px solid #f53400;
+}
+/*Caixa de Texto*/
+
+/*Botão*/
+.button {
+  --main-focus: #2d8cf0;
+  --font-color: #ffffff;
+  --bg-color-sub: #f53400;
+  --bg-color: #f53400;
+  --main-color: #fffbfb;
+  --shadow-color: #212020;
+  position: relative;
+  width: 200px;
+  height: 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(23px);
+  color: var(--font-color);
+  font-weight: 900;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(119px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 25px;
+  fill: var(--main-color);
+}
+
+.button:hover {
+  background: var(--bg-color);
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 179px;
+  transform: translateX(0);
+}
+
+.button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--shadow-color);
+}
+/*Botão*/
